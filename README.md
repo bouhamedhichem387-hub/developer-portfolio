@@ -1,19 +1,20 @@
-# Developer Portfolio
+# Developer Portfolio — Bouhamed Hichem
 
-A responsive, dark-themed personal portfolio for Hichem Bouhamed, a Computer Science student exploring software engineering. The site presents a professional introduction, areas of learning, linked projects, education context, and a verified public contact channel.
+A responsive, dark editorial-style personal portfolio for **Bouhamed Hichem**, a Licence GLSI student at ESPIN Sfax. The site introduces my learning journey, current skills, education, and selected GitHub projects.
 
 ## Features
 
 - Responsive layout with mobile navigation and smooth section navigation.
 - Accessible landmarks, skip link, visible keyboard focus, and reduced-motion support.
-- About, skills, projects, education, training, contact, and footer sections.
-- Working project category filters and direct GitHub repository links.
-- Portfolio and project details use only known information; no unverified education dates, certifications, contact details, or experience are claimed.
-- Client-rendered React application built with Vite.
+- About, skills and programming languages, selected projects, education, training, contact, and footer sections.
+- Functional project category filters and direct links to the three public project repositories.
+- Verified education details supplied for this portfolio: Licence GLSI, 2nd year, ESPIN Sfax.
+- No unverified certifications, personal email, phone number, work experience, or social profiles are claimed.
+- Static client application; no API, backend, or environment configuration required.
 
 ## Technology
 
-React, TypeScript, Vite, CSS, Lucide React, Vitest, and Testing Library.
+React 18, TypeScript, Vite 6, CSS, Lucide React, Vitest, and Testing Library.
 
 ## Requirements
 
@@ -26,51 +27,50 @@ npm install
 npm run dev
 ```
 
-Vite prints a local URL (usually `http://localhost:5173`). To create and preview a production build:
+Open the local URL printed by Vite (typically `http://localhost:5173`). Create and preview a production build with:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Quality checks
+## Tests and lint
 
 ```bash
 npm test
 npm run lint
 ```
 
-## Configuration
+Tests cover key profile content, project repository links, project category filtering, and mobile navigation.
 
-This static portfolio does not require environment variables or a backend. `.env.example` is intentionally not required. Do not put secrets in frontend source code: Vite-exposed values are public in the built client.
+## Configuration and API
 
-## API
-
-There is no API or server-side data in this project. Project cards are maintained in `src/App.tsx` and link to public GitHub repositories.
+No environment variables are required; see `.env.example`. There is no API or server-side data. Project information is maintained in `src/App.tsx`. Do not put secrets in frontend source code: bundled Vite values are public.
 
 ## Structure
 
 ```text
 .
-├── docs/screenshots/     # instructions for capturing genuine screenshots
+├── docs/screenshots/       # instructions for recording genuine screenshots
 ├── src/
-│   ├── test/             # test setup
-│   ├── App.tsx            # page sections and reusable UI components
-│   ├── App.test.tsx       # rendering and project-filter tests
-│   ├── main.tsx           # React entry point
-│   └── styles.css         # responsive design system and page styles
+│   ├── test/setup.ts       # Testing Library setup
+│   ├── App.tsx             # content, sections, and reusable UI components
+│   ├── App.test.tsx        # rendering and interaction tests
+│   ├── main.tsx            # React entry point
+│   └── styles.css          # responsive visual system
 ├── index.html
 ├── package.json
+├── tsconfig.json
 └── vite.config.ts
 ```
 
 ## Screenshots
 
-No screenshots are included because none have been captured from a running application. Follow [`docs/screenshots/README.md`](docs/screenshots/README.md) to record authentic desktop and mobile views.
+No application screenshots have been captured or committed. See [`docs/screenshots/README.md`](docs/screenshots/README.md) for instructions to capture genuine desktop and mobile images from a running site.
 
 ## Deployment
 
-No deployment has been configured or published. Build with `npm run build`, then deploy the generated `dist/` directory to a static hosting provider of your choice. Configure the provider's SPA fallback to serve `index.html` for client-side paths. Verify the deployment yourself; no external service is required by this project.
+No deployment has been configured or published. Build with `npm run build`, then publish the generated `dist/` directory using a static host of your choice. Configure an SPA fallback to `index.html` if needed. Deployment is left to the repository owner.
 
 ## License
 
